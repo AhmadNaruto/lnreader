@@ -15,7 +15,8 @@ jobs:
           node-version: '18'
       - name: Install Dependencies
         run: |
-          npm install && npm audit fix
+          npm install
+          npm audit fix --force
       - name: Create .env
         run: |
           cat > .env << EOF
